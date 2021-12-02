@@ -27,8 +27,9 @@ renderer.render(scene, camera)
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
 // shape that will be rendered
-const torusTexture = new THREE.TextureLoader().load('/assets/Plane.035__0_metallicRoughness.png')
-const material = new THREE.MeshStandardMaterial({map: torusTexture})
+// const torusTexture = new THREE.TextureLoader().load('/assets/Plane.035__0_metallicRoughness.png')
+// const material = new THREE.MeshStandardMaterial({map: torusTexture})
+const material = new THREE.MeshStandardMaterial({color: 0xFFF647})
 // skin of the object
 
 const torus = new THREE.Mesh(geometry, material)
@@ -71,9 +72,8 @@ function addStar() {
 Array(200).fill().forEach(addStar)
 
 
-const spaceTexture = new THREE.TextureLoader().load('/assets/milky_way_starry_sky_stars_128523_1920x1080.jpg')
-scene.background = spaceTexture
-
+// const spaceTexture = new THREE.TextureLoader().load('/assets/milky_way_starry_sky_stars_128523_1920x1080.jpg')
+// scene.background = spaceTexture
 
 
 function animate() {
